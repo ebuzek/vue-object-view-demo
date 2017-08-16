@@ -5,10 +5,10 @@
     <p>A light-weight component for displaying arbitrary JavaScript objects.</p>
     </div>
     <h4>Why?</h4>
-    <p>This purpose of this component is to display pretty much any JavaScript values. It can handle primitive values (i.e., Boolean, Null, Numbers...), but it's especially useful for viewing larger structured values like <strong>nested objects and arrays</strong>. The coolest thing is that it handles correctly <strong>circular references</strong>, in other words, you can display objects that contain themselves (JSON.stringify() would fail for such values...).</p>
+    <p>This component is useful for displaying JavaScript values of all types. It can handle primitive values (i.e., Boolean, Null, Numbers...), but it's especially useful for viewing larger structured values like <strong>nested objects and arrays</strong>. The coolest thing is that it handles correctly <strong>circular references</strong>, in other words, you can display objects that contain themselves (JSON.stringify() would fail for such values...).</p>
+    <p>Vue-object-view was created to build the in-browser <strong>JavaScript debugger</strong> in the <a href="http://emanuelbuzek.eu/parapple/">Parapple</a> project.</p>
     <p>The following examples should show how the component displays various JavaScript values.</p>
     <h4>Primitive types</h4>
-    <p>The component displays just anything you specify </p>
     <VueObjectView v-model="string" />
     <VueObjectView v-model="boolean" />
     <VueObjectView v-model="number" />
