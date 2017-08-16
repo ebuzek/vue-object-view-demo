@@ -1,16 +1,47 @@
 <template>
   <div id="app">
+    <div class="header">
+    <h2>Vue Object View</h2>
+    <p>A light-weight component for displaying arbitrary JavaScript objects.</p>
+    </div>
+    <h4>Why?</h4>
+    <p>This purpose of this component is to display pretty much any JavaScript values. It can handle primitive values (i.e., Boolean, Null, Numbers...), but it's especially useful for viewing larger structured values like <strong>nested objects and arrays</strong>. The coolest thing is that it handles correctly <strong>circular references</strong>, in other words, you can display objects that contain themselves (JSON.stringify() would fail for such values...).</p>
+    <p>The following examples should show how the component displays various JavaScript values.</p>
+    <h4>Primitive types</h4>
+    <p>The component displays just anything you specify </p>
     <VueObjectView v-model="string" />
     <VueObjectView v-model="boolean" />
     <VueObjectView v-model="number" />
     <VueObjectView v-model="_undefined" />
     <VueObjectView v-model="nullVal" />
-    <VueObjectView v-model="object1" />
-    <VueObjectView v-model="object2" />
-    <VueObjectView v-model="array1" />
-    <VueObjectView v-model="array2" />
-    <VueObjectView v-model="array3" />
-    <VueObjectView v-model="array4" />
+    <h4>Objects</h4>
+    <p>
+      An ordinary JS object containing various types...
+      <VueObjectView v-model="object1" />
+    </p>
+    
+    <p>
+      The following object is <strong>cirular</strong> - it contains a reference to itself.
+      <VueObjectView v-model="object2" />
+    </p>
+    
+    <h4>Arrays</h4>
+    <p>
+      An array containing mixed types...
+      <VueObjectView v-model="array1" />
+    </p>
+    <p>
+      A slightly longer array with 256 elements...
+      <VueObjectView v-model="array2" />
+    </p>
+    <p>
+      An array containing an object that contains the array itself - another <strong>circular structure</strong>
+      <VueObjectView v-model="array3" />
+    </p>
+    <p>
+      Another array with infite objects... 
+      <VueObjectView v-model="array4" />
+    </p>
     
   </div>
 </template>
@@ -84,9 +115,11 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+div.header {
+  text-align: center;
 }
 
 h1, h2 {
