@@ -6,7 +6,7 @@ See the demo live here: http://emanuelbuzek.eu/vov-demo/
 
 ## About
 
-This demo app showcases the [https://github.com/ebuzek/vue-object-view](vue-object-view) VueJS component. Its purpose is to display arbitrary JavaScript values, including ones with circular references.
+This demo app showcases the [vue-object-view](https://github.com/ebuzek/vue-object-view) VueJS component. Its purpose is to display arbitrary JavaScript values, including ones with circular references. It was created to build the in-browser **JavaScript debugger** for the [PARAPPLE](http://emanuelbuzek.eu/parapple/#/) project.
 
 ## Build Setup
 
