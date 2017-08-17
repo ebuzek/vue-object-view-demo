@@ -43,6 +43,17 @@
       <VueObjectView v-model="array4" />
     </p>
     
+    <h4>Additional properties</h4>
+    <p>
+      Setting <strong>nowrap = false</strong> allows the inline mode to wrap across multiple lines:
+      <VueObjectView v-model="array2" :nowrap="false" />
+    </p>
+
+    <p>
+      The expand button text can be changed using <strong>expandButtonText</strong> property:
+      <VueObjectView v-model="object2" expandButtonText="expand" />
+    </p>
+
   </div>
 </template>
 
